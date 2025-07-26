@@ -89,6 +89,9 @@ TW_EXCLUDE_SUPERSU := true
 # VNDK Flags Config
 BOARD_VNDK_VERSION := current
 
+# Fstab Path
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
