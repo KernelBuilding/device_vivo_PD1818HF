@@ -120,12 +120,14 @@ subsystem sound
 /dev/usb_accessory        0660   root       usb
 /dev/tun                  0660   system     vpn
 
-# XDmemory audio_ktv
-/dev/vivo_audio_ktv_dev   0660   system     audio
-
 # CDMA radio interface MUX
 /dev/ts0710mux*           0640   radio      radio
 /dev/ppp                  0660   radio      vpn
+
+#ifdef VENDOR_EDIT
+#Xuweijie1@BSP.Storage , 20200601. add for Memory Monitor
+/dev/sg3         0600   system     system
+#endif /* VENDOR_EDIT */
 
 # sysfs properties
 /sys/devices/platform/trusty.*      trusty_version        0440  root   log
